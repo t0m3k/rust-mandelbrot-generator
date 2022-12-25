@@ -38,7 +38,7 @@ fn main() {
                 });
             }
         })
-        .expect("error spawning threads");
+        .unwrap();
     }
 
     write_image(&args[1], &pixels, bounds).expect("error writing PNG file")
